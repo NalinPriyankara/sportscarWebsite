@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'boxicons/css/boxicons.min.css';
+import {Routes, Route} from 'react-router-dom';
+
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Banner from './pages/Banner';
+import Header from './components/Header';
+import { Form } from 'react-router-dom';
+
+export const AppContext = React.createContext();
 
 function App() {
+  const [data, setData] = useState([]);
+
+  const fetchData = () => {
+    fetch('http://localhost:3000/api/vehiclesData.json')
+    .then(res => res.json())
+    .then(data => setData(data))
+    .catch(e => console.log(e.message));
+  };
+  
+  useEffect (() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppContext.Provider value={{ data, setData }}>
+        <Header />
+        <Routes>
+          <Route exact path = '/' element = {<Banner />} />
+        </Routes>
+        
+      </AppContext.Provider>
+    </>
   );
 }
 
