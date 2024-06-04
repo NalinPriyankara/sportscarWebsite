@@ -110,7 +110,7 @@ function Banner() {
                       <div className="car-features">
                         <p>{car.description}</p>
                         <Link 
-                          to={`/vehicle/${car._id}`} 
+                          to={`/vehicles/${car._id}`} 
                           className='detail-link text-center'
                         >
                           Explore <i className="bi bi-arrow-right-short"></i>
