@@ -3,6 +3,7 @@ import { AppContext } from '../App';
 import './vehicles.css';
 import bgImg from '../images/Bugatti.jpg';
 import PageTitle from '../components/PageTitle';
+import VehicleCard from '../components/VehicleCard';
 
 function Vehicles() {
   const { data: cars, setData: setCars } = useContext(AppContext);
@@ -17,7 +18,7 @@ function Vehicles() {
         <div className="row">
           {cars && 
             cars.length > 0 && 
-            cars.map(car => <h1 key={car._id}>{car.title}</h1>)}
+            cars.map(car => <VehicleCard key = {car._id} car = {car} />)}
         </div>
       </div>
     </div>
