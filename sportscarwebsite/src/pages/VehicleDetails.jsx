@@ -101,7 +101,7 @@ function VehicleDetails() {
               />
             </div>
             <div className="details-description">
-              <h4>Description</h4>
+              <h4><b>Description</b></h4>
               <p>{car.description}</p>
           </div>
           </div>

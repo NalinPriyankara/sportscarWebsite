@@ -28,7 +28,7 @@
 }
 
 .vehicle-details .icon {
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .vehicle-details .icon i {
@@ -40,7 +40,7 @@
 
 .vehicle-details .title {
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     font-size: 18px;
 }
 
