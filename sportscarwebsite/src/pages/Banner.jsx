@@ -66,7 +66,7 @@ function Banner() {
                             color='#f82249'
                           />
                           <CircleBar 
-                            name='Engine' 
+                            name='Torque' 
                             number={car.engine} 
                             color='#fe5d26'
                           />

@@ -43,34 +43,34 @@ function VehicleDetails() {
             <div className="content">
               <h2>Vehicle Details</h2>
               <div className="details-box">
-                <i className="bi bi-emoji-smile"></i>
-                <span>abjaef oieasf</span>
+              <i className="bi bi-speedometer2"></i>
+                <span>Engine</span>
                 <p>
-                  <strong>Lorem ipsum</strong>Lorem ipsum dolor sit amet consectetur.
+                  <strong>{car.hp} hp</strong> - {car.engineData}
                 </p>
               </div>
 
               <div className="details-box">
                 <i className="bi bi-journal-richtext"></i>
-                <span>abjaef oieasf</span>
+                <span>Torque</span>
                 <p>
-                  <strong>Lorem ipsum</strong>Lorem ipsum dolor sit amet consectetur.
+                  <strong>{car.torque} Nm</strong>
                 </p>
               </div>
 
               <div className="details-box">
                 <i className="bi bi-clock"></i>
-                <span>abjaef oieasf</span>
+                <span>Weight</span>
                 <p>
-                  <strong>Lorem ipsum</strong>Lorem ipsum dolor sit amet consectetur.
+                  <strong>{car.weight} kg</strong>
                 </p>
               </div>
 
               <div className="details-box">
                 <i className="bi bi-award"></i>
-                <span>abjaef oieasf</span>
+                <span>0 to 100km/h</span>
                 <p>
-                  <strong>Lorem ipsum</strong>Lorem ipsum dolor sit amet consectetur.
+                  <strong>{car.odometer} s</strong>
                 </p>
               </div>
 
